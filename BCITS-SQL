@@ -1,0 +1,65 @@
+
+1)
+  i) create table Employee (Empid bigint primary key, Name varchar(40) not null, Age int, JoiningDate date);
+
+  ii) Alter table Employee add Salary decimal(8,2);
+
+
+2) 
+  i) select * from TempData;
+
+  ii) drop table TempData;
+
+
+3) create table Products (ProductID bigint primary key, ProductName varchar(40) not null, Price decimal(6,2) (price > 0));
+
+4) alter table Products rename column OldOrders to ArchivedOrders;
+
+5) create index Category where table Inventory;
+
+6) insert into Student(StudentID, Name,Age, Grade) values(101,'Alice',20,'A');
+
+7) update Results set Grade = 'B' where Marks < 60;
+
+8) delete from Orders where Status = 'Cancelled';
+
+9) select ID from TableA right join TableB on TableA.ID = TableB.ID;
+
+10) 
+
+11) select Names from Employee where JoiningDate > 2020-01-01;
+
+12) 
+  i)- Select max(salary) as maxSalary from Employee;
+    - Select salary from Employee where salary desc limit 1; 
+     	
+  ii)- Select min(salary) as minSalary from Employee;
+     - Select salery from Employee where salary asc limit 1; 
+
+  iii) select avg(salary) from Employee ;
+
+
+
+13) Select * from Orders where OrderAmount > 1000 AND Status = 'Delivered';
+
+14) select sum(category) from Sales; 
+
+15) select Customer.name, Orders.productName, Orders.amount from Customer;
+
+16) select Customer.name, Orders.productName, Orders.amount from Orders;
+
+17) select * from customer;
+
+18) select name from Employee where salary > (select avg(salary) from Employee);
+
+19) select * from Orders where orderAmount >(select avg(orderAmount) from Orders);
+
+20) select customer.names, orders.name, products.name from customer;
+
+21) insert Balance from Transactions into Accounts;
+
+22) 
+
+23) 
+	
+	

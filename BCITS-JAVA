@@ -1,0 +1,188 @@
+33) 
+   a. Polymorphism:
+	ploymorphism is a performing one action in multiple ways. polymorphism is two types. 
+
+	i) compile-time Polymorphism - it is nothing but method overloading.overloading is achived by declaring same method names with differ in 	parameters is known as overloading.
+	
+	ex: public void product(int price){
+	   	}
+	    public void product(int price, String model){
+		}
+		
+
+	ii) Run-time Polymorphism - it is nothing but method overriding.overriding is achived by implementing the method with same name from the parent class is known as overriding.
+	
+	@Override	
+	public void product(int pice){
+	}
+
+    b.Encapsulation :
+	wrappng of data and data members in a single unit. in this we declare properties as private and use getter and setter for access the properties.
+
+	private int price;
+
+	public void setPrice(int price){
+	this.price = price;
+	}
+
+	public int getPrice(){
+	return price;
+	}
+
+
+    c.Inheritance :
+	inheritance allows to inherit the properties and methods from parent class to child class by using extends keyword. inheritance is 5 types
+
+	i)single level inheritance - one parent class have one child class
+	ii)Multi level inheritance - one parent class have one child class. that child class act as parent class for another child class.
+	iii)Multiple inheritance - multiple parent classes have one child class.
+	iv)hyrarchical inheritance - one parent class have multiple child classes.
+	v)hybrid inheritance - multiple parents classes have mutiple child classes. 
+
+     d. Abstraction :
+	 it is a process of hiding the implementation and showing only necessity function to the user.
+	  ex: whats app messages.
+
+     e. trow - used to throw an exception manually
+
+	throws - we will declare throws in method when that may throws an exception 
+	
+
+34) 
+   a. .equals() - equals method check for actual values.  - a.equls(a).
+           ==   - == is check for address. a == a.
+
+   b. final - final is a keyword. if we decare as final we can't modify that property or method.
+      finally - after try-catch block finally block will excute. the finally block code always excute.
+      finalize() - this is object class method. it is deprecated method.
+
+   c. implements - it is used to implement the interface. by using implementaion we can implement the unimplemented methods in interface. like repoImpl class implements repo class.
+      extends - it is used to extends the class or interface. by using extends we can can access parents class methods properties in child class. child class extends parent class.
+
+   d.checked exceptions - compiler will forces you to handle these exceptions beacause these are compile time exceptions.by using try-catch blocks we can handle these checked exceptions. ex: IO Exception.
+     unchecked exceptions - compiler can't find theese exceptions while compiling. theese are run time exceptions.we can't handle theese exceptions with try catch blocks. ex: NullPointerException.
+
+   e. method - method is a set of instructions to perform a particular action. it has access specifies, non-access specifies , return type.
+      constructor - constructor is special type of method. it is used to create an object of class. it doesn't have return type. it has same name as class name.
+
+   f.TreeMap - it will follow sorted order. it will not accept null values.
+     HashMap - it doesn't follow any order.it will accept only one null value.
+     LinkedHashMap - it will follow insertion order.it will accept null values.
+
+   g. @EnableWebMvc - it will allow spring mvc features.
+      @Configuration - it will configure the application and create beans for application.
+
+35) output : compilation error. beacause condtion wrong in for loop.
+
+36) output : a = 10  b = 15
+
+37) output : "Hello from Outer"
+
+38) output : false
+
+39) output : Java Programming
+
+40) output : true
+
+41) output : 1 3
+
+42) output : 
+
+43) No
+
+44) it is used for unit testing.
+
+45) gives an error. ambiguity will come which bean need to give.
+
+46) output : Hello!
+
+47) 
+
+@controller
+@RequestMapping("/")
+public class Controller{
+
+	@AutoWired
+	private ServiceImpl service;
+
+	public String fetchByEmail(@requestparam String email,Model model){
+	 UserDto dto = service.findByEmail(email);	
+	 
+	 if(dto != null){
+	 model.addAttribute("dto",dto);
+	 return "view";	
+	 }
+	model.addAttribute("fail","user not found");
+	return "home";
+	}
+}
+
+48)
+
+
+49)
+
+
+50)	 int row = 5;
+	
+	for(int i = 1; i <= row; i++){
+	   for(int j = 1; j <= i; j++){
+	     System.out.print(j);
+	   }
+	   System.out.println();
+	}
+
+	for(int i = row-1; i => 1; i++){
+	  for(int j = 1; j <= i; j++){
+	     System.out.print(j);
+	  }
+	  System.out.println();
+	}
+
+
+51)
+
+52)
+
+53)
+
+54) DispatcherServlet - it will handle the request and responses. it will take request from client and send to controller. and it will take response from controller and return the response to client.
+
+
+55) 
+	@getMapping("/home)
+	public String homepage(model model){
+	  model.addAttribute("welcome","Welcome to home");
+	  return "home";
+	}
+
+56) a) @configuration -it will indicates class contains bean definations.
+
+    b) @bean - it is method level annotation. it will create and manage bean.
+
+    c) Dependency Injection - injecting one class into another class.
+
+    d) Inversion of Control(IOC) - it will control of object creation and lifecycle of object.
+
+57)
+
+58)
+
+59) 
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+      <body>
+
+    	<h2>List of Names:</h2>
+    	<ul>
+          <c:forEach var="product" items="${listOfProducts}">
+              <li>${product}</li>
+          </c:forEach>
+   	</ul>
+
+      </body>
+
+
+
+
+

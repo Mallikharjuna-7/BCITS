@@ -1,0 +1,56 @@
+
+26) ORM stands for Object Relational Mapping. It is used as relation between databse and java.
+
+27) Components of JPA: 
+    1.Persistence.xml
+    2.EntityManagerFactory
+    3.EntityManager
+
+
+28) a) @OneToMany - this annotation is used for join the tables with one to many relation.
+	  Exmple - one seller have many products.
+    b) @oneToOne  - this annotation is used for join the two tables with one to one relation.
+	  Example - one person have only one adhar number.
+    c) @ManyToOne - this annotation is used for join the tables with many to one relation.
+	  Example - many users use single network.
+    d) @Enity     - this annotation is used in entity class for table creation. 
+
+    e) Entity Transaction - like getTransaction.begin(), getTransaction.commit().
+
+29) JPQL - Java Persistance Query Language.
+
+30) @NamedQuery(name="fetchProduct" query="select e.min(price) from Products e")
+
+31)
+ create persistence.xml file in project resource/META-INF folder.
+
+	inside the xml file set your database datails
+	
+	JDBCURL = "jdbc:mysql://localhost:3306/databasename";
+	USERNAME = "root";
+	PASSWORD = "12345";
+
+	create an entity class and mark as @Entity
+
+ 	then go to repository- and inject EntityManagerFactory in repository
+	
+	@Autowired
+	EntityManagerFactor factory;
+
+	then create EntityManager to get Transactions.
+
+	EntityManager manager = factory.createEntityManager();
+	manager.getTransaction.begin();
+	manager.persist(entity);
+	manager.getTransaction.commit();
+	manager.close();
+	
+32) 
+
+1.Load and Register Driver.
+2.get Connection
+3.prepare Statement.
+4.excute Statement.
+5.get Resultset.
+6.close connection.	
+
